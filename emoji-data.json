@@ -47658,9 +47658,12 @@
     "c": "flags",
     "k": [
       "US",
+      "USA",
       "flag",
       "flag: United States",
-      "flag: united states"
+      "flag: united states",
+      "America",
+      "United State of America"
     ],
     "p": 0.5
   },
