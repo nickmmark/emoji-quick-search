@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emoji Finder — Black Theme Final</title>
+  <style>
+    /* ===== Theme (pure black background, white text) ===== */
+    :root {
+      --bg: #000;            /* page background */
+      --bg-elev: #111;       /* cards/tiles */
+      --border: #333;        /* borders */
+      --muted: #cfcfd4;      /* secondary text */
+      --text: #fff;          /* primary text */
+      --accent: #fff;        /* accents & focus */
+      --ring: rgba(255,255,255,.45);
+      --shadow: 0 6px 24px rgba(0,0,0,.75);
+    }
+
+    *{box-sizing:border-box}
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color-scheme: dark;
+    }
+
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .wrap { max-width: 1100px; padding: 16px 20px 8px; margin: 0 auto; }
+
+    .searchbar { display:flex; gap:10px; align-items:center }
+    .search { width:100%; padding:14px 16px 14px 44px; border-radius:12px;
+      border:1px solid #444; background: #000; color: var(--text);
+      outline:none; box-shadow: inset 0 0 0 1px #222; font-size:16px }
+    .search:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--ring) }
+    .search::placeholder { color:#8a8a8a }
+
+    .search-icon { position:relative; left:34px; width:0; height:0; pointer-events:none }
+    .search-icon::after { content:"🔎"; position:relative; left:-18px; font-size:18px; top:4px; opacity:.9 }
+
+    .hints { display:flex; gap:12px; align-items:center; color: var(--muted);
+      font-size:13px; margin-top:8px; flex-wrap: wrap }
+
+    .toolbar { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px }
+    .pill { padding:6px 10px; border:1px solid #666; border-radius:999px; font-size:12px;
+      color: var(--text); background: #000; cursor:pointer }
+    .pill:hover { border-color:#aaa }
+    .pill.active { color:#000; background:#fff; border-color:#fff }
+
+    main { max-width:1100px; margin:0 auto; padding:12px 18px 36px }
+    .section-title { color: var(--text); font-size:13px; margin:22px 2px 8px; text-transform:uppercase; letter-spacing:.12em }
+
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(72px,1fr)); gap:10px }
+    .tile { background: var(--bg-elev); border:1px solid var(--border); border-radius:14px; padding:10px; text-align:center;
+      cursor:pointer; user-select:none; transition:transform .08s ease, box-shadow .12s ease, border-color .12s ease; box-shadow: var(--shadow); color: var(--text) }
+    .tile:hover { transform: translateY(-2px); border-color:#999 }
+    .tile:focus-visible { border-color: var(--accent); box-shadow: 0 0 0 4px var(--ring), var(--shadow); outline:none }
+
+    .emoji { font-size:34px; display:block; color: inherit; transition: transform .12s ease; transform-origin: center; will-change: transform; }
+/* Hover/focus enlarge without layout shift */
+.tile:hover .emoji, .tile:focus-visible .emoji { transform: scale(1.3); }
+/* Subtle feedback on press (touch/desktop) */
+.tile:active .emoji { transform: scale(1.18); }
+@media (prefers-reduced-motion: reduce){
+  .emoji { transition: none }
+  .tile:hover .emoji, .tile:focus-visible .emoji, .tile:active .emoji { transform: none }
+} /* ensure symbols render white */
+    .name { font-size:12px; color: var(--muted); margin-top:6px; min-height:28px; display:flex; align-items:flex-start; justify-content:center; text-wrap: pretty }
+
+    .toast { position:fixed; bottom:18px; left:50%; transform:translateX(-50%) translateY(20px); background:#0b0b0b; border:1px solid #3a3a3a; padding:10px 14px; border-radius:10px; box-shadow: var(--shadow); opacity:0; pointer-events:none; transition:opacity .18s ease, transform .18s ease; color: var(--text) }
+    .toast.show { opacity:1; transform:translateX(-50%) translateY(0) }
+
+    .empty { color: var(--muted); text-align:center; padding:24px 8px }
+
+    @media (max-width:520px){ .emoji{font-size:30px} .grid{grid-template-columns:repeat(auto-fill,minmax(64px,1fr))} }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <label for="q" class="sr-only">Search for an emoji or symbol</label>
+      <div class="searchbar">
+        <div class="search-icon" aria-hidden="true"></div>
+        <input id="q" class="search" type="text" placeholder="Search… (usa, happy, °, ∇, ≈, pizza, check)" autocomplete="off" spellcheck="false" autofocus />
+      </div>
+      <div class="hints">
+        <span>Tips: type multiple words (e.g. <em>red heart</em>), press <b>Enter</b> to copy, <b>Esc</b> to clear.</span>
+        <span id="load-status"></span>
+        <span> • Data: <code id="data-url">emoji-data.json</code></span>
+        <button class="pill" id="change-data" title="Set a custom dataset URL">Set data URL</button>
+      </div>
+      <div class="toolbar" id="toolbar">
+        <button class="pill" data-filter="recent">Recent</button>
+        <button class="pill" data-filter="smileys">Smileys</button>
+        <button class="pill" data-filter="people">People</button>
+        <button class="pill" data-filter="gestures">Gestures</button>
+        <button class="pill" data-filter="animals">Animals</button>
+        <button class="pill" data-filter="food">Food</button>
+        <button class="pill" data-filter="activities">Activities</button>
+        <button class="pill" data-filter="travel">Travel</button>
+        <button class="pill" data-filter="objects">Objects</button>
+        <button class="pill" data-filter="symbols">Symbols</button>
+        <button class="pill" data-filter="flags">Flags</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="section-recent" hidden>
+      <div class="section-title">Recent</div>
+      <div class="grid" id="recent-grid"></div>
+    </div>
+    <div class="section-title" id="results-title">Results</div>
+    <div class="grid" id="grid" role="list" aria-label="Emoji results"></div>
+    <div id="empty" class="empty" hidden>No matches. Try broader terms (e.g., "heart" instead of "red heart").</div>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+  // ===== Notes =====
+  // JSON schema accepted: [{ e:"😀", n:"grinning face", c:"smileys", k:["smile"], p:0.5 }]
+  // Also supports emojibase-like fields: emoji/label/group/subgroup/tags/shortcodes/skins
+
+  // ===== Utilities =====
+  const $ = (sel, root=document) => root.querySelector(sel);
+  const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+  const normalize = (s) => String(s||'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/&/g,'and').replace(/[^a-z0-9]+/g,' ').trim();
+  const debounce = (fn, ms=80) => { let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn(...args), ms); } };
+  function toast(msg){ const el=$('#toast'); el.textContent=msg; el.classList.add('show'); setTimeout(()=>el.classList.remove('show'),900); }
+
+  // ===== Starter subset (guarantee visible content) =====
+  const STARTER = [
+    {e:'😀', n:'grinning face', k:['smile','happy','grin','joy','face'], c:'smileys', p:.95},
+    {e:'😂', n:'face with tears of joy', k:['lol','joy','tears','funny','laugh','cry'], c:'smileys', p:1.0},
+    {e:'😊', n:'smiling face with smiling eyes', k:['smile','warm','happy','content','face'], c:'smileys', p:.92},
+    {e:'😍', n:'smiling face with heart-eyes', k:['love','hearts','in love','heart eyes'], c:'smileys', p:.96},
+    {e:'😉', n:'winking face', k:['wink','flirt','tease','face'], c:'smileys', p:.86},
+    {e:'🤔', n:'thinking face', k:['think','hmm','ponder','consider'], c:'smileys', p:.86},
+    {e:'😭', n:'loudly crying face', k:['cry','sad','tears','sob'], c:'smileys', p:.90},
+    {e:'👍', n:'thumbs up', k:['like','approve','yes','ok','thumb up'], c:'gestures', p:.98},
+    {e:'🙏', n:'folded hands', k:['please','thank you','prayer','thanks'], c:'gestures', p:.92},
+    {e:'👏', n:'clapping hands', k:['applause','bravo','clap'], c:'gestures', p:.84},
+    {e:'❤️', n:'red heart', k:['love','heart','valentine','red'], c:'symbols', p:1.0},
+    {e:'✅', n:'check mark button', k:['check','done','complete','approved','ok'], c:'symbols', p:.92},
+    {e:'❌', n:'cross mark', k:['x','no','wrong','close'], c:'symbols', p:.82},
+    {e:'✨', n:'sparkles', k:['sparkle','magic','shiny'], c:'symbols', p:.86},
+    {e:'🔥', n:'fire', k:['lit','hot','flame','spicy'], c:'symbols', p:.95},
+    {e:'🍕', n:'pizza', k:['pizza','slice','food','pepperoni'], c:'food', p:.80},
+    {e:'🍔', n:'hamburger', k:['burger','hamburger','food'], c:'food', p:.74},
+    {e:'🍣', n:'sushi', k:['sushi','japanese','food'], c:'food', p:.62},
+    {e:'🐶', n:'dog face', k:['dog','puppy','pet','doge'], c:'animals', p:.78},
+    {e:'🐱', n:'cat face', k:['cat','kitty','pet'], c:'animals', p:.76},
+    {e:'✈️', n:'airplane', k:['plane','flight','travel','air'], c:'travel', p:.74},
+    {e:'🚗', n:'automobile', k:['car','auto','drive'], c:'travel', p:.60},
+    {e:'🇺🇸', n:'United States', k:['usa','us','america','united states','stars and stripes','american flag','flag'], c:'flags', p:.95},
+    // a few symbols to prove dark-theme visibility
+    {e:'°', n:'degree sign', k:['degree','deg','temperature','angle'], c:'symbols', p:.9},
+    {e:'∇', n:'nabla', k:['nabla','del','gradient','vector calculus'], c:'symbols', p:.85},
+    {e:'≈', n:'approximately equal', k:['approx','approximately','about equal','almost equal'], c:'symbols', p:.8}
+  ];
+
+  // ===== Data & Index =====
+  let EMOJI = STARTER.slice(); // start visible
+  const TOKEN_INDEX = new Map();
+  const ALL_TOKENS = new Set();
+  function indexData(){
+    TOKEN_INDEX.clear(); ALL_TOKENS.clear();
+    EMOJI.forEach((item, i)=>{
+      const baseTokens = new Set([
+        ...normalize(item.n).split(' '),
+        ...(item.k||[]).flatMap(t=>normalize(t).split(' ')),
+        normalize(item.c)
+      ].filter(Boolean));
+      baseTokens.forEach(tok=>{ ALL_TOKENS.add(tok); if(!TOKEN_INDEX.has(tok)) TOKEN_INDEX.set(tok,new Set()); TOKEN_INDEX.get(tok).add(i); });
+      const phrases = [normalize(item.n), ...(item.k||[]).map(normalize)];
+      phrases.forEach(ph=>{ if(!TOKEN_INDEX.has(ph)) TOKEN_INDEX.set(ph,new Set()); TOKEN_INDEX.get(ph).add(i); ALL_TOKENS.add(ph); });
+    });
+  }
+
+  // ===== External JSON dataset loader & URL handling =====
+  const DEFAULT_DATA_URL = 'emoji-data.json'; // relative; absolute fallback added in probe
+  const GH_BLOB_URL = 'https://github.com/nickmmark/emoji-quick-search/blob/main/emoji-data.json';
+  function toRawGithub(u){
+    try{
+      const m = String(u||'').match(/^https?:\/\/github\.com\/([^\/]+)\/([^\/]+)\/blob\/(.+)$/);
+      if (m) return `https://raw.githubusercontent.com/${m[1]}/${m[2]}/${m[3]}`;
+    }catch(_){}
+    return u;
+  }
+  const REMOTE_DATA_URLS = [
+    toRawGithub(GH_BLOB_URL),
+    'https://cdn.jsdelivr.net/gh/nickmmark/emoji-quick-search@main/emoji-data.json'
+  ];
+
+  function setDataURLLabel(u){ const el=$('#data-url'); if(el) el.textContent=u; }
+
+  function mapGroup(group, subgroup){
+    const GROUP_ID_MAP = {0:'smileys',1:'people',2:'people',3:'animals',4:'food',5:'travel',6:'activities',7:'objects',8:'symbols',9:'flags'};
+    if (typeof group === 'number') return GROUP_ID_MAP[group] || 'objects';
+    const g = normalize(group); const sg = normalize(subgroup);
+    if (g.includes('smileys')) return 'smileys';
+    if (g.includes('people')) return sg.includes('hand') ? 'gestures' : 'people';
+    if (g.includes('gestures')) return 'gestures';
+    if (g.includes('animals')) return 'animals';
+    if (g.includes('food')) return 'food';
+    if (g.includes('activities')) return 'activities';
+    if (g.includes('travel')) return 'travel';
+    if (g.includes('objects')) return 'objects';
+    if (g.includes('symbols')) return 'symbols';
+    if (g.includes('flags')) return 'flags';
+    return 'objects';
+  }
+
+  function normalizeExternalData(json){
+    const out=[]; if(!Array.isArray(json)) return out;
+    for(const row of json){ if(!row) continue;
+      if (row.e || row.emoji){
+        const name=row.n||row.name||row.label||''; const ch=row.e||row.emoji; if(!ch||!name) continue;
+        const cat=row.c||row.category||row.group||'objects';
+        const tags=new Set([name,
+          ...(Array.isArray(row.k)?row.k:[]),
+          ...(Array.isArray(row.tags)?row.tags:[]),
+          ...(Array.isArray(row.keywords)?row.keywords:[]),
+          ...(Array.isArray(row.shortcodes)?row.shortcodes.map(s=>String(s).replace(/_/g,' ')):[])
+        ].filter(Boolean).map(String));
+        const p=Number(row.p ?? row.popularity ?? 0.5)||0.5;
+        out.push({e:ch,n:String(name),k:[...tags],c:mapGroup(cat,row.subgroup),p});
+        if (Array.isArray(row.skins)){
+          for(const s of row.skins){ if(s&&s.emoji){ out.push({e:s.emoji,n:String(name),k:[...tags,'skin tone'],c:mapGroup(cat,row.subgroup),p:p-0.01}); } }
+        }
+        continue;
+      }
+      if (row.name && row.char){
+        const tags=new Set([row.name, ...(row.tags||[])]);
+        out.push({e:row.char,n:row.name,k:[...tags],c:mapGroup(row.category||'objects'),p:Number(row.p||0.5)});
+      }
+    }
+    return out;
+  }
+
+  async function loadEmojiJSON(url){
+    if(!url) return false;
+    url = toRawGithub(url);
+    const status=$('#load-status'); setDataURLLabel(url);
+    try{
+      if(status) status.textContent=`Loading data from ${url} …`;
+      const res=await fetch(url,{cache:'no-store'});
+      if(!res.ok) throw new Error(res.status+' '+res.statusText);
+      const json=await res.json();
+      const mapped=normalizeExternalData(json);
+      if(!mapped.length) throw new Error('Dataset parsed but empty or wrong shape');
+      EMOJI=mapped; if(status) status.textContent=`Loaded ${EMOJI.length.toLocaleString()} emojis from JSON`;
+      return true;
+    }catch(err){
+      console.error('Failed to load emoji JSON', err);
+      if(status) status.textContent=`Failed to load ${url}. Using starter subset.`;
+      return false;
+    }
+  }
+
+  // ===== Search =====
+  function queryTokens(q){ const s=normalize(q); if(!s) return []; return s.split(' ').filter(Boolean); }
+  function search(q, activeCategory=null){
+    const toks=queryTokens(q);
+    let cand=new Set(EMOJI.map((_,i)=>i));
+    const and=(a,b)=>new Set([...a].filter(x=>b.has(x)));
+    for(const t of toks){
+      const exact=TOKEN_INDEX.get(t);
+      if(exact){ cand=and(cand, exact); }
+      else {
+        const approx=new Set();
+        for(const tok of ALL_TOKENS){ if(tok.startsWith(t)||tok.includes(t)){ for(const idx of (TOKEN_INDEX.get(tok)||[])) approx.add(idx); } }
+        cand=and(cand, approx);
+      }
+    }
+    if(activeCategory && activeCategory!=='recent'){ cand=new Set([...cand].filter(i=>EMOJI[i].c===activeCategory)); }
+    const scored=[...cand].map(i=>{ const item=EMOJI[i]; const hay=new Set([normalize(item.n), ...(item.k||[]).map(normalize)]); let score=(item.p||0.5)*10; for(const t of toks){ for(const h of hay){ if(h===t){ score+=5; break; } } for(const h of hay){ const words=h.split(' '); if(words.includes(t)){ score+=2.5; break; } if(h.startsWith(t)){ score+=1.8; break; } if(h.includes(t)){ score+=1.0; break; } } if(normalize(item.c).startsWith(t)) score+=0.6; } return {i,score}; }).sort((a,b)=>b.score-a.score);
+    return scored.map(s=>({...EMOJI[s.i], _i:s.i}));
+  }
+
+  // ===== Render =====
+  const grid=$('#grid'); const recentSection=$('#section-recent'); const recentGrid=$('#recent-grid'); const emptyMsg=$('#empty'); const resultsTitle=$('#results-title'); const RECENT_MAX=20;
+  function loadRecents(){ try{ return JSON.parse(localStorage.getItem('emoji_recents')||'[]'); }catch{ return []; } }
+  function saveRecents(list){ localStorage.setItem('emoji_recents', JSON.stringify(list.slice(0,RECENT_MAX))); }
+  function pushRecent(item){ const list=loadRecents(); const without=list.filter(x=>x.e!==item.e); without.unshift({e:item.e,n:item.n,k:item.k,c:item.c}); saveRecents(without); renderRecents(); }
+  function tileHTML(item){ return `<button class="tile" role="listitem" tabindex="0" data-idx="${item._i}" aria-label="${escapeHtml(item.n)} — click to copy"><span class="emoji">${item.e}</span><div class="name">${escapeHtml(item.n)}</div></button>`; }
+  function renderList(items){ const limit=800; grid.innerHTML=items.slice(0,limit).map(tileHTML).join(''); emptyMsg.hidden=items.length>0; resultsTitle.textContent = items.length ? `Results — ${items.length.toLocaleString()}` : 'Results'; }
+  function renderRecents(){ const list=loadRecents(); if(!list.length){ recentSection.hidden=true; recentGrid.innerHTML=''; return;} recentSection.hidden=false; const items=list.map(rec=>{ const idx=EMOJI.findIndex(x=>x.e===rec.e); return {...rec, _i: idx>=0?idx:-1}; }); recentGrid.innerHTML=items.map(tileHTML).join(''); }
+  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])); }
+
+  // ===== Events =====
+  let ACTIVE_FILTER=null;
+  function setActiveFilter(f){ ACTIVE_FILTER=f; $$('.pill').forEach(b=>b.classList.toggle('active', b.dataset.filter===f)); }
+  $('#toolbar').addEventListener('click', (e)=>{ const b=e.target.closest('.pill'); if(!b) return; const f=b.dataset.filter; setActiveFilter(ACTIVE_FILTER===f?null:f); handleSearch(); if(f==='recent'){ document.getElementById('section-recent').scrollIntoView({behavior:'smooth', block:'start'});} else { window.scrollTo({top:0, behavior:'smooth'});} });
+  grid.addEventListener('click', (e)=>{ const tile=e.target.closest('.tile'); if(!tile) return; const idx=+tile.dataset.idx; const item = isFinite(idx)&&idx>=0 ? EMOJI[idx] : null; if(!item) return; (navigator.clipboard?.writeText(item.e) || Promise.reject()).catch(()=>{ const ta=document.createElement('textarea'); ta.value=item.e; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }).finally(()=>{ toast(`Copied ${item.e} — ${item.n}`); pushRecent(item); }); });
+  recentGrid.addEventListener('click', (e)=>{ const tile=e.target.closest('.tile'); if(!tile) return; const idx=+tile.dataset.idx; const item = isFinite(idx)&&idx>=0 ? EMOJI[idx] : { e: tile.querySelector('.emoji').textContent, n: tile.querySelector('.name').textContent }; (navigator.clipboard?.writeText(item.e) || Promise.reject()).finally(()=>{ toast(`Copied ${item.e} — ${item.n}`); pushRecent(item); }); });
+  document.addEventListener('keydown', (e)=>{ const q=$('#q'); if(e.key==='Enter' && (document.activeElement===q || document.activeElement===document.body)){ const first=grid.querySelector('.tile'); if(first){ first.click(); e.preventDefault(); } } if(e.key==='Escape'){ if(q.value){ q.value=''; handleSearch(); } q.focus(); } const tiles=$$('.tile', grid); const focusIdx=tiles.indexOf(document.activeElement); if (focusIdx>=0){ const cols=Math.max(1, Math.floor(grid.clientWidth/82)); if(e.key==='ArrowRight'){ tiles[Math.min(focusIdx+1, tiles.length-1)]?.focus(); e.preventDefault(); } if(e.key==='ArrowLeft'){ tiles[Math.max(focusIdx-1, 0)]?.focus(); e.preventDefault(); } if(e.key==='ArrowDown'){ tiles[Math.min(focusIdx+cols, tiles.length-1)]?.focus(); e.preventDefault(); } if(e.key==='ArrowUp'){ tiles[Math.max(focusIdx-cols, 0)]?.focus(); e.preventDefault(); } if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==='c'){ document.activeElement?.click(); e.preventDefault(); } } }, true);
+  const handleSearch = debounce(()=>{ const q=$('#q').value; const results=search(q, ACTIVE_FILTER); renderList(results); }, 40);
+  $('#q').addEventListener('input', handleSearch);
+
+  // ===== Data URL controls =====
+  document.addEventListener('click', async (e)=>{
+    if (e.target && e.target.id === 'change-data') {
+      const cur = localStorage.getItem('emoji_dataset_url') || DEFAULT_DATA_URL;
+      const u = prompt('Enter dataset URL (relative to this server or absolute):', cur);
+      if (u && u.trim()) {
+        const target = toRawGithub(u.trim());
+        localStorage.setItem('emoji_dataset_url', target);
+        setDataURLLabel(target);
+        const ok = await loadEmojiJSON(target);
+        if (ok) { indexData(); renderRecents(); renderList(search($('#q').value||'')); }
+      }
+    }
+  });
+
+  // ===== Boot (auto‑probe URLs) =====
+  async function tryLoadAndRemember(url){
+    if (!url) return false;
+    const ok = await loadEmojiJSON(url);
+    if (ok) {
+      localStorage.setItem('emoji_dataset_url', toRawGithub(url));
+      indexData(); renderRecents(); renderList(search($('#q').value||''));
+      return true;
+    }
+    return false;
+  }
+
+  (async function init(){
+    // Render starter immediately so UI isn't empty
+    indexData(); renderRecents(); renderList(search(''));
+
+    const qs = new URLSearchParams(location.search);
+    const candidates = [
+      qs.get('data') && toRawGithub(qs.get('data')),
+      localStorage.getItem('emoji_dataset_url') && toRawGithub(localStorage.getItem('emoji_dataset_url')),
+      DEFAULT_DATA_URL,
+      '/' + DEFAULT_DATA_URL.replace(/^\/+/, ''),
+      ...REMOTE_DATA_URLS
+    ];
+
+    for (const u of candidates) {
+      if (await tryLoadAndRemember(u)) return;
+    }
+    // If all failed, starter set remains; status already reflects failure.
+  })();
+  </script>
+</body>
+</html>

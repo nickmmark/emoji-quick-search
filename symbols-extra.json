@@ -1,0 +1,1093 @@
+[
+  {
+    "e": "°",
+    "n": "degree sign",
+    "c": "symbols",
+    "k": [
+      "degree",
+      "deg",
+      "temperature",
+      "angle",
+      "arcdegree"
+    ],
+    "p": 0.9
+  },
+  {
+    "e": "℃",
+    "n": "degree Celsius sign",
+    "c": "symbols",
+    "k": [
+      "degree celsius",
+      "celsius",
+      "centigrade",
+      "temperature",
+      "°C"
+    ],
+    "p": 0.86
+  },
+  {
+    "e": "℉",
+    "n": "degree Fahrenheit sign",
+    "c": "symbols",
+    "k": [
+      "degree fahrenheit",
+      "fahrenheit",
+      "temperature",
+      "°F"
+    ],
+    "p": 0.84
+  },
+  {
+    "e": "°C",
+    "n": "degree Celsius",
+    "c": "symbols",
+    "k": [
+      "degree celsius",
+      "celsius",
+      "centigrade",
+      "temperature"
+    ],
+    "p": 0.86
+  },
+  {
+    "e": "°F",
+    "n": "degree Fahrenheit",
+    "c": "symbols",
+    "k": [
+      "degree fahrenheit",
+      "fahrenheit",
+      "temperature"
+    ],
+    "p": 0.84
+  },
+  {
+    "e": "K",
+    "n": "kelvin sign",
+    "c": "symbols",
+    "k": [
+      "kelvin",
+      "temperature",
+      "K"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "Å",
+    "n": "angstrom",
+    "c": "symbols",
+    "k": [
+      "angstrom",
+      "ångström",
+      "angstrom unit",
+      "1e-10 m"
+    ],
+    "p": 0.7
+  },
+  {
+    "e": "Å",
+    "n": "angstrom sign",
+    "c": "symbols",
+    "k": [
+      "angstrom",
+      "ångström",
+      "compatibility"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "µ",
+    "n": "micro sign",
+    "c": "symbols",
+    "k": [
+      "micro",
+      "mu",
+      "10^-6",
+      "prefix"
+    ],
+    "p": 0.75
+  },
+  {
+    "e": "μ",
+    "n": "mu (Greek)",
+    "c": "symbols",
+    "k": [
+      "mu",
+      "micro",
+      "mean"
+    ],
+    "p": 0.72
+  },
+  {
+    "e": "Ω",
+    "n": "omega",
+    "c": "symbols",
+    "k": [
+      "omega",
+      "ohm",
+      "last"
+    ],
+    "p": 0.66
+  },
+  {
+    "e": "Ω",
+    "n": "ohm sign",
+    "c": "symbols",
+    "k": [
+      "ohm",
+      "resistance",
+      "omega",
+      "compatibility"
+    ],
+    "p": 0.55
+  },
+  {
+    "e": "ℏ",
+    "n": "h-bar",
+    "c": "symbols",
+    "k": [
+      "hbar",
+      "planck constant",
+      "reduced planck",
+      "ħ"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "α",
+    "n": "alpha",
+    "c": "symbols",
+    "k": [
+      "alpha",
+      "greek"
+    ],
+    "p": 0.78
+  },
+  {
+    "e": "β",
+    "n": "beta",
+    "c": "symbols",
+    "k": [
+      "beta",
+      "greek"
+    ],
+    "p": 0.74
+  },
+  {
+    "e": "γ",
+    "n": "gamma",
+    "c": "symbols",
+    "k": [
+      "gamma",
+      "greek"
+    ],
+    "p": 0.72
+  },
+  {
+    "e": "Δ",
+    "n": "capital delta",
+    "c": "symbols",
+    "k": [
+      "delta",
+      "change",
+      "difference",
+      "increment",
+      "triangle"
+    ],
+    "p": 0.84
+  },
+  {
+    "e": "δ",
+    "n": "delta",
+    "c": "symbols",
+    "k": [
+      "delta",
+      "change",
+      "difference"
+    ],
+    "p": 0.7
+  },
+  {
+    "e": "ε",
+    "n": "epsilon",
+    "c": "symbols",
+    "k": [
+      "epsilon",
+      "greek"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "θ",
+    "n": "theta",
+    "c": "symbols",
+    "k": [
+      "theta",
+      "angle",
+      "greek"
+    ],
+    "p": 0.72
+  },
+  {
+    "e": "λ",
+    "n": "lambda",
+    "c": "symbols",
+    "k": [
+      "lambda",
+      "wavelength",
+      "eigenvalue"
+    ],
+    "p": 0.74
+  },
+  {
+    "e": "π",
+    "n": "pi",
+    "c": "symbols",
+    "k": [
+      "pi",
+      "3.14159",
+      "circle",
+      "tau/2"
+    ],
+    "p": 0.9
+  },
+  {
+    "e": "τ",
+    "n": "tau",
+    "c": "symbols",
+    "k": [
+      "tau",
+      "2π",
+      "circle"
+    ],
+    "p": 0.65
+  },
+  {
+    "e": "Σ",
+    "n": "capital sigma",
+    "c": "symbols",
+    "k": [
+      "sigma",
+      "sum",
+      "summation"
+    ],
+    "p": 0.7
+  },
+  {
+    "e": "σ",
+    "n": "sigma",
+    "c": "symbols",
+    "k": [
+      "sigma",
+      "std dev",
+      "deviation"
+    ],
+    "p": 0.7
+  },
+  {
+    "e": "Φ",
+    "n": "phi",
+    "c": "symbols",
+    "k": [
+      "phi",
+      "golden ratio",
+      "magnetic flux"
+    ],
+    "p": 0.62
+  },
+  {
+    "e": "φ",
+    "n": "phi (small)",
+    "c": "symbols",
+    "k": [
+      "phi",
+      "golden ratio"
+    ],
+    "p": 0.62
+  },
+  {
+    "e": "Ψ",
+    "n": "psi",
+    "c": "symbols",
+    "k": [
+      "psi",
+      "wavefunction"
+    ],
+    "p": 0.58
+  },
+  {
+    "e": "ψ",
+    "n": "psi (small)",
+    "c": "symbols",
+    "k": [
+      "psi",
+      "wavefunction"
+    ],
+    "p": 0.58
+  },
+  {
+    "e": "≈",
+    "n": "approximately equal",
+    "c": "symbols",
+    "k": [
+      "approx",
+      "approximately",
+      "about equal",
+      "almost equal",
+      "\\approx"
+    ],
+    "p": 0.8
+  },
+  {
+    "e": "≃",
+    "n": "asymptotically equal",
+    "c": "symbols",
+    "k": [
+      "asymptotic",
+      "similar",
+      "approx"
+    ],
+    "p": 0.58
+  },
+  {
+    "e": "≅",
+    "n": "congruent to",
+    "c": "symbols",
+    "k": [
+      "congruent",
+      "isomorphic",
+      "approx"
+    ],
+    "p": 0.62
+  },
+  {
+    "e": "≡",
+    "n": "identical to",
+    "c": "symbols",
+    "k": [
+      "identical",
+      "equivalent",
+      "triple bar"
+    ],
+    "p": 0.64
+  },
+  {
+    "e": "≜",
+    "n": "equal by definition",
+    "c": "symbols",
+    "k": [
+      "definition",
+      "def",
+      "equal by definition"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "∼",
+    "n": "similar to",
+    "c": "symbols",
+    "k": [
+      "similar",
+      "tilde",
+      "proportional-ish"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "≠",
+    "n": "not equal",
+    "c": "symbols",
+    "k": [
+      "not equal",
+      "inequality",
+      "\\ne"
+    ],
+    "p": 0.86
+  },
+  {
+    "e": "≤",
+    "n": "less-than or equal",
+    "c": "symbols",
+    "k": [
+      "<=",
+      "le",
+      "less or equal",
+      "inequality",
+      "\\le"
+    ],
+    "p": 0.8
+  },
+  {
+    "e": "≥",
+    "n": "greater-than or equal",
+    "c": "symbols",
+    "k": [
+      ">=",
+      "ge",
+      "greater or equal",
+      "inequality",
+      "\\ge"
+    ],
+    "p": 0.8
+  },
+  {
+    "e": "±",
+    "n": "plus-minus",
+    "c": "symbols",
+    "k": [
+      "plus minus",
+      "uncertainty",
+      "tolerance",
+      "\\pm"
+    ],
+    "p": 0.78
+  },
+  {
+    "e": "∓",
+    "n": "minus-plus",
+    "c": "symbols",
+    "k": [
+      "minus plus",
+      "tolerance",
+      "\\mp"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "−",
+    "n": "minus sign",
+    "c": "symbols",
+    "k": [
+      "minus",
+      "negative",
+      "math minus"
+    ],
+    "p": 0.72
+  },
+  {
+    "e": "×",
+    "n": "multiplication sign",
+    "c": "symbols",
+    "k": [
+      "times",
+      "multiply",
+      "cross"
+    ],
+    "p": 0.8
+  },
+  {
+    "e": "÷",
+    "n": "division sign",
+    "c": "symbols",
+    "k": [
+      "divide",
+      "division",
+      "obelus"
+    ],
+    "p": 0.72
+  },
+  {
+    "e": "·",
+    "n": "middle dot",
+    "c": "symbols",
+    "k": [
+      "dot",
+      "center dot",
+      "multiply",
+      "scalar"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "⋅",
+    "n": "dot operator",
+    "c": "symbols",
+    "k": [
+      "dot operator",
+      "multiply",
+      "scalar"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "∞",
+    "n": "infinity",
+    "c": "symbols",
+    "k": [
+      "infinite",
+      "limit",
+      "math"
+    ],
+    "p": 0.82
+  },
+  {
+    "e": "∝",
+    "n": "proportional to",
+    "c": "symbols",
+    "k": [
+      "proportional",
+      "proportional to",
+      "varies as",
+      "\\propto"
+    ],
+    "p": 0.66
+  },
+  {
+    "e": "∴",
+    "n": "therefore",
+    "c": "symbols",
+    "k": [
+      "therefore",
+      "thus"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "∵",
+    "n": "because",
+    "c": "symbols",
+    "k": [
+      "because",
+      "since"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "∂",
+    "n": "partial derivative",
+    "c": "symbols",
+    "k": [
+      "partial",
+      "derivative",
+      "d/dx",
+      "calculus",
+      "curly d"
+    ],
+    "p": 0.84
+  },
+  {
+    "e": "∇",
+    "n": "nabla",
+    "c": "symbols",
+    "k": [
+      "nabla",
+      "del",
+      "gradient",
+      "vector calculus"
+    ],
+    "p": 0.82
+  },
+  {
+    "e": "∫",
+    "n": "integral",
+    "c": "symbols",
+    "k": [
+      "integral",
+      "calculus",
+      "area",
+      "\\int"
+    ],
+    "p": 0.78
+  },
+  {
+    "e": "∮",
+    "n": "contour integral",
+    "c": "symbols",
+    "k": [
+      "contour integral",
+      "line integral",
+      "\\oint"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "∑",
+    "n": "summation",
+    "c": "symbols",
+    "k": [
+      "sum",
+      "sigma",
+      "series",
+      "\\sum"
+    ],
+    "p": 0.76
+  },
+  {
+    "e": "∏",
+    "n": "product",
+    "c": "symbols",
+    "k": [
+      "product",
+      "capital pi",
+      "series",
+      "\\prod"
+    ],
+    "p": 0.64
+  },
+  {
+    "e": "√",
+    "n": "square root",
+    "c": "symbols",
+    "k": [
+      "root",
+      "square root",
+      "radical",
+      "\\sqrt"
+    ],
+    "p": 0.78
+  },
+  {
+    "e": "∛",
+    "n": "cube root",
+    "c": "symbols",
+    "k": [
+      "root",
+      "cube root",
+      "radical"
+    ],
+    "p": 0.62
+  },
+  {
+    "e": "∈",
+    "n": "element of",
+    "c": "symbols",
+    "k": [
+      "in",
+      "element of",
+      "set",
+      "\\in"
+    ],
+    "p": 0.64
+  },
+  {
+    "e": "∉",
+    "n": "not an element of",
+    "c": "symbols",
+    "k": [
+      "not in",
+      "not element",
+      "set",
+      "\\notin"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "∋",
+    "n": "contains as member",
+    "c": "symbols",
+    "k": [
+      "contains",
+      "reverse element of"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "∌",
+    "n": "does not contain as member",
+    "c": "symbols",
+    "k": [
+      "not contains",
+      "reverse not element"
+    ],
+    "p": 0.48
+  },
+  {
+    "e": "∪",
+    "n": "union",
+    "c": "symbols",
+    "k": [
+      "union",
+      "set union",
+      "\\cup"
+    ],
+    "p": 0.66
+  },
+  {
+    "e": "∩",
+    "n": "intersection",
+    "c": "symbols",
+    "k": [
+      "intersection",
+      "set intersection",
+      "\\cap"
+    ],
+    "p": 0.66
+  },
+  {
+    "e": "⊂",
+    "n": "subset of",
+    "c": "symbols",
+    "k": [
+      "subset",
+      "proper subset",
+      "set",
+      "\\subset"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "⊆",
+    "n": "subset of or equal",
+    "c": "symbols",
+    "k": [
+      "subset or equal",
+      "subseteq",
+      "set",
+      "\\subseteq"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "⊄",
+    "n": "not a subset of",
+    "c": "symbols",
+    "k": [
+      "not subset",
+      "\\nsubset"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "⊃",
+    "n": "superset of",
+    "c": "symbols",
+    "k": [
+      "superset",
+      "proper superset",
+      "set",
+      "\\supset"
+    ],
+    "p": 0.58
+  },
+  {
+    "e": "⊇",
+    "n": "superset of or equal",
+    "c": "symbols",
+    "k": [
+      "superset or equal",
+      "supseteq",
+      "set",
+      "\\supseteq"
+    ],
+    "p": 0.58
+  },
+  {
+    "e": "∅",
+    "n": "empty set",
+    "c": "symbols",
+    "k": [
+      "empty set",
+      "null set",
+      "\\emptyset"
+    ],
+    "p": 0.64
+  },
+  {
+    "e": "ℝ",
+    "n": "real numbers",
+    "c": "symbols",
+    "k": [
+      "reals",
+      "R",
+      "set of reals"
+    ],
+    "p": 0.64
+  },
+  {
+    "e": "ℤ",
+    "n": "integers",
+    "c": "symbols",
+    "k": [
+      "integers",
+      "Z",
+      "set of integers"
+    ],
+    "p": 0.64
+  },
+  {
+    "e": "ℕ",
+    "n": "natural numbers",
+    "c": "symbols",
+    "k": [
+      "naturals",
+      "N",
+      "set of naturals"
+    ],
+    "p": 0.62
+  },
+  {
+    "e": "ℚ",
+    "n": "rational numbers",
+    "c": "symbols",
+    "k": [
+      "rationals",
+      "Q",
+      "set of rationals"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "ℂ",
+    "n": "complex numbers",
+    "c": "symbols",
+    "k": [
+      "complex",
+      "C",
+      "set of complex"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "¬",
+    "n": "logical not",
+    "c": "symbols",
+    "k": [
+      "not",
+      "negation",
+      "logic",
+      "\\lnot"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "∧",
+    "n": "logical and",
+    "c": "symbols",
+    "k": [
+      "and",
+      "conjunction",
+      "logic",
+      "\\land"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "∨",
+    "n": "logical or",
+    "c": "symbols",
+    "k": [
+      "or",
+      "disjunction",
+      "logic",
+      "\\lor"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "⊻",
+    "n": "exclusive or",
+    "c": "symbols",
+    "k": [
+      "xor",
+      "exclusive or",
+      "logic"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "⇒",
+    "n": "double right arrow",
+    "c": "symbols",
+    "k": [
+      "double arrow",
+      "implies"
+    ],
+    "p": 0.62
+  },
+  {
+    "e": "⇔",
+    "n": "double arrow both ways",
+    "c": "symbols",
+    "k": [
+      "iff",
+      "equivalence",
+      "double arrow"
+    ],
+    "p": 0.62
+  },
+  {
+    "e": "∀",
+    "n": "for all",
+    "c": "symbols",
+    "k": [
+      "forall",
+      "universal quantifier",
+      "logic",
+      "\\forall"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "∃",
+    "n": "there exists",
+    "c": "symbols",
+    "k": [
+      "exists",
+      "existential quantifier",
+      "logic",
+      "\\exists"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "∠",
+    "n": "angle",
+    "c": "symbols",
+    "k": [
+      "angle",
+      "geometry"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "⊥",
+    "n": "perpendicular",
+    "c": "symbols",
+    "k": [
+      "perpendicular",
+      "orthogonal",
+      "right angle"
+    ],
+    "p": 0.62
+  },
+  {
+    "e": "∥",
+    "n": "parallel",
+    "c": "symbols",
+    "k": [
+      "parallel",
+      "lines",
+      "||"
+    ],
+    "p": 0.58
+  },
+  {
+    "e": "∘",
+    "n": "ring operator",
+    "c": "symbols",
+    "k": [
+      "compose",
+      "function composition",
+      "circle"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "′",
+    "n": "prime",
+    "c": "symbols",
+    "k": [
+      "prime",
+      "minutes",
+      "arcminutes",
+      "feet"
+    ],
+    "p": 0.62
+  },
+  {
+    "e": "″",
+    "n": "double prime",
+    "c": "symbols",
+    "k": [
+      "double prime",
+      "seconds",
+      "arcseconds",
+      "inches"
+    ],
+    "p": 0.6
+  },
+  {
+    "e": "‴",
+    "n": "triple prime",
+    "c": "symbols",
+    "k": [
+      "triple prime",
+      "arcseconds (third)"
+    ],
+    "p": 0.46
+  },
+  {
+    "e": "‰",
+    "n": "per mille",
+    "c": "symbols",
+    "k": [
+      "permille",
+      "per thousand",
+      "per mille"
+    ],
+    "p": 0.5
+  },
+  {
+    "e": "‱",
+    "n": "basis point",
+    "c": "symbols",
+    "k": [
+      "per ten thousand",
+      "basis points",
+      "bp"
+    ],
+    "p": 0.48
+  },
+  {
+    "e": "→",
+    "n": "right arrow",
+    "c": "symbols",
+    "k": [
+      "arrow",
+      "right",
+      "maps to",
+      "implies"
+    ],
+    "p": 0.76
+  },
+  {
+    "e": "←",
+    "n": "left arrow",
+    "c": "symbols",
+    "k": [
+      "arrow",
+      "left"
+    ],
+    "p": 0.64
+  },
+  {
+    "e": "↑",
+    "n": "up arrow",
+    "c": "symbols",
+    "k": [
+      "arrow",
+      "up"
+    ],
+    "p": 0.64
+  },
+  {
+    "e": "↓",
+    "n": "down arrow",
+    "c": "symbols",
+    "k": [
+      "arrow",
+      "down"
+    ],
+    "p": 0.64
+  },
+  {
+    "e": "↔",
+    "n": "left right arrow",
+    "c": "symbols",
+    "k": [
+      "arrow",
+      "left right",
+      "bidirectional"
+    ],
+    "p": 0.62
+  },
+  {
+    "e": "↦",
+    "n": "maps to",
+    "c": "symbols",
+    "k": [
+      "maps to",
+      "function map"
+    ],
+    "p": 0.5
+  }
+]
