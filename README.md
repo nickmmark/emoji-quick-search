@@ -20,3 +20,27 @@ Type to filter, click (or press Enter) to copy. Zero backend. Works from any sta
   * remembered URL in localStorage
   * built-in remotes (your GitHub raw + jsDelivr mirror)
 * No server code: just static files.
+
+#### Date schema
+Data Format
+
+The app accepts a compact schema (preferred) and can normalize common alternatives:
+
+```
+Preferred (compact)
+{
+  "e": "😀",
+  "n": "grinning face",
+  "c": "smileys",
+  "k": ["smile","happy","grin","joy","face"],
+  "p": 0.95
+}
+```
+
+e: emoji/symbol (string)
+n: human-readable name
+c: category one of smileys|people|gestures|animals|food|activities|travel|objects|symbols|flags
+k: keywords/tags (array of strings)
+p: optional popularity/boost (0..1, default 0.5)
+
+
