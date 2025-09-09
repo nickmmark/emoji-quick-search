@@ -1900,7 +1900,9 @@
       "face",
       "monster",
       "skull",
-      "skull and crossbones"
+      "skull and crossbones",
+      "dead",
+      "dying"
     ],
     "p": 0.5
   },
@@ -2218,7 +2220,8 @@
     "k": [
       "card",
       "game",
-      "heart suit"
+      "heart suit",
+      "love"
     ],
     "p": 0.5
   },
@@ -3360,7 +3363,8 @@
       "religion",
       "star",
       "star of David",
-      "star of david"
+      "star of david",
+      "isreal"
     ],
     "p": 0.5
   },
@@ -3520,7 +3524,8 @@
     "c": "smileys",
     "k": [
       "heart",
-      "red heart"
+      "red heart",
+      "love"
     ],
     "p": 0.5
   },
@@ -3549,7 +3554,8 @@
       "mending heart",
       "recovering",
       "recuperating",
-      "well"
+      "well",
+      "broken heart"
     ],
     "p": 0.5
   },
@@ -5367,7 +5373,9 @@
       "IL",
       "flag",
       "flag: Israel",
-      "flag: israel"
+      "flag: israel",
+      "jew",
+      "jewish"
     ],
     "p": 0.5
   },
@@ -25320,10 +25328,14 @@
     "c": "objects",
     "k": [
       "medicine",
+      "doctor",
       "needle",
       "shot",
       "sick",
-      "syringe"
+      "syringe",
+      "medical",
+      "vaccine",
+      "vax"
     ],
     "p": 0.5
   },
@@ -25335,7 +25347,8 @@
       "doctor",
       "medicine",
       "pill",
-      "sick"
+      "sick",
+      "medical"
     ],
     "p": 0.5
   },
@@ -27697,7 +27710,8 @@
       "jewish",
       "religion",
       "synagogue",
-      "temple"
+      "temple",
+      "isreal"
     ],
     "p": 0.5
   },
@@ -27709,7 +27723,9 @@
       "candelabrum",
       "candlestick",
       "menorah",
-      "religion"
+      "religion",
+      "jew",
+      "jewish"
     ],
     "p": 0.5
   },
@@ -46639,7 +46655,8 @@
       "drop of blood",
       "injury",
       "medicine",
-      "menstruation"
+      "menstruation",
+      "medical"
     ],
     "p": 0.5
   },
@@ -46649,7 +46666,8 @@
     "c": "objects",
     "k": [
       "adhesive bandage",
-      "bandage"
+      "bandage",
+      "medical"
     ],
     "p": 0.5
   },
@@ -47088,7 +47106,9 @@
       "grave",
       "graveyard",
       "headstone",
-      "tombstone"
+      "tombstone",
+      "dead",
+      "dying"
     ],
     "p": 0.5
   },
@@ -47407,7 +47427,8 @@
       "cardiology",
       "heart",
       "organ",
-      "pulse"
+      "pulse",
+      "medical"
     ],
     "p": 0.5
   },
@@ -47420,8 +47441,12 @@
       "exhalation",
       "inhalation",
       "lungs",
+      "anatomical",
+      "anatomical heart",
       "organ",
-      "respiration"
+      "respiration",
+      "pulmonary",
+      "medical"
     ],
     "p": 0.5
   },
