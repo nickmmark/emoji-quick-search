@@ -1820,7 +1820,9 @@
       "drop",
       "rain",
       "umbrella",
-      "umbrella with rain drops"
+      "umbrella with rain drops",
+      "water",
+      "wet"
     ],
     "p": 0.5
   },
@@ -25823,7 +25825,9 @@
       "comic",
       "splashing",
       "sweat",
-      "sweat droplets"
+      "sweat droplets",
+      "water",
+      "wet"
     ],
     "p": 0.5
   },
@@ -25836,7 +25840,9 @@
       "comic",
       "drop",
       "droplet",
-      "sweat"
+      "sweat",
+      "water",
+      "wet"
     ],
     "p": 0.5
   },
@@ -25848,7 +25854,11 @@
       "comic",
       "dash",
       "dashing away",
-      "running"
+      "running",
+      "air",
+      "blow",
+      "wind",
+      "fart"
     ],
     "p": 0.5
   },
@@ -25862,7 +25872,8 @@
       "monster",
       "pile of poo",
       "poo",
-      "poop"
+      "poop",
+      "shit"
     ],
     "p": 0.5
   },
@@ -25875,7 +25886,8 @@
       "comic",
       "flex",
       "flexed biceps",
-      "muscle"
+      "muscle",
+      "strength"
     ],
     "p": 0.5
   },
@@ -26044,7 +26056,8 @@
       "currency",
       "dollar",
       "heavy dollar sign",
-      "money"
+      "money",
+      "$"
     ],
     "p": 0.5
   },
@@ -26071,7 +26084,8 @@
       "money",
       "note",
       "yen",
-      "yen banknote"
+      "yen banknote",
+      "japan"
     ],
     "p": 0.5
   },
@@ -26086,7 +26100,9 @@
       "dollar",
       "dollar banknote",
       "money",
-      "note"
+      "note",
+      "USD",
+      "united states"
     ],
     "p": 0.5
   },
@@ -26116,7 +26132,9 @@
       "money",
       "note",
       "pound",
-      "pound banknote"
+      "pound banknote",
+      "united kingdom",
+      "england"
     ],
     "p": 0.5
   },
@@ -26166,7 +26184,8 @@
       "computer",
       "laptop",
       "pc",
-      "personal"
+      "personal",
+      "macbook"
     ],
     "p": 0.5
   },
@@ -26188,7 +26207,8 @@
       "computer disk",
       "disk",
       "minidisk",
-      "optical"
+      "optical",
+      "data"
     ],
     "p": 0.5
   },
@@ -26200,7 +26220,9 @@
       "computer",
       "disk",
       "floppy",
-      "floppy disk"
+      "floppy disk",
+      "save",
+      "data"
     ],
     "p": 0.5
   },
@@ -26261,7 +26283,8 @@
       "curl",
       "document",
       "page",
-      "page with curl"
+      "page with curl",
+      "paper"
     ],
     "p": 0.5
   },
@@ -26272,7 +26295,8 @@
     "k": [
       "document",
       "page",
-      "page facing up"
+      "page facing up",
+      "paper"
     ],
     "p": 0.5
   },
@@ -26428,7 +26452,8 @@
     "c": "objects",
     "k": [
       "ledger",
-      "notebook"
+      "notebook",
+      "book"
     ],
     "p": 0.5
   },
@@ -26437,7 +26462,8 @@
     "n": "notebook",
     "c": "objects",
     "k": [
-      "notebook"
+      "notebook",
+      "book"
     ],
     "p": 0.5
   },
@@ -26546,7 +26572,10 @@
     "c": "objects",
     "k": [
       "memo",
-      "pencil"
+      "pencil",
+      "note",
+      "notes",
+      "paper"
     ],
     "p": 0.5
   },
