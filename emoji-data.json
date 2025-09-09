@@ -35,7 +35,9 @@
     "c": "symbols",
     "k": [
       "keycap",
-      "keycap: 1"
+      "keycap: 1",
+      "number",
+      "block number"
     ],
     "p": 0.5
   },
@@ -45,7 +47,9 @@
     "c": "symbols",
     "k": [
       "keycap",
-      "keycap: 2"
+      "keycap: 2",
+      "number",
+      "block number"
     ],
     "p": 0.5
   },
@@ -55,7 +59,9 @@
     "c": "symbols",
     "k": [
       "keycap",
-      "keycap: 3"
+      "keycap: 3",
+      "number",
+      "block number"
     ],
     "p": 0.5
   },
@@ -65,7 +71,9 @@
     "c": "symbols",
     "k": [
       "keycap",
-      "keycap: 4"
+      "keycap: 4",
+      "number",
+      "block number"
     ],
     "p": 0.5
   },
@@ -75,7 +83,9 @@
     "c": "symbols",
     "k": [
       "keycap",
-      "keycap: 5"
+      "keycap: 5",
+      "number",
+      "block number"
     ],
     "p": 0.5
   },
@@ -85,7 +95,9 @@
     "c": "symbols",
     "k": [
       "keycap",
-      "keycap: 6"
+      "keycap: 6",
+      "number",
+      "block number"
     ],
     "p": 0.5
   },
@@ -95,7 +107,9 @@
     "c": "symbols",
     "k": [
       "keycap",
-      "keycap: 7"
+      "keycap: 7",
+      "number",
+      "block number"
     ],
     "p": 0.5
   },
@@ -105,7 +119,9 @@
     "c": "symbols",
     "k": [
       "keycap",
-      "keycap: 8"
+      "keycap: 8",
+      "number",
+      "block number"
     ],
     "p": 0.5
   },
@@ -115,7 +131,9 @@
     "c": "symbols",
     "k": [
       "keycap",
-      "keycap: 9"
+      "keycap: 9",
+      "number",
+      "block number"
     ],
     "p": 0.5
   },
@@ -350,7 +368,8 @@
     "k": [
       "delta",
       "change",
-      "difference"
+      "difference",
+      "greek"
     ],
     "p": 0.7
   },
@@ -382,7 +401,8 @@
     "k": [
       "lambda",
       "wavelength",
-      "eigenvalue"
+      "eigenvalue",
+      "greek"
     ],
     "p": 0.74
   },
@@ -393,7 +413,8 @@
     "k": [
       "mu",
       "micro",
-      "mean"
+      "mean",
+      "greek"
     ],
     "p": 0.72
   },
@@ -405,7 +426,8 @@
       "pi",
       "3.14159",
       "circle",
-      "tau/2"
+      "tau/2",
+      "greek"
     ],
     "p": 0.9
   },
@@ -416,7 +438,9 @@
     "k": [
       "sigma",
       "std dev",
-      "deviation"
+      "deviation",
+      "standard deviation",
+      "greek"
     ],
     "p": 0.7
   },
@@ -427,7 +451,8 @@
     "k": [
       "tau",
       "2π",
-      "circle"
+      "circle",
+      "greek"
     ],
     "p": 0.65
   },
@@ -437,7 +462,8 @@
     "c": "symbols",
     "k": [
       "phi",
-      "golden ratio"
+      "golden ratio",
+      "greek"
     ],
     "p": 0.62
   },
@@ -447,7 +473,8 @@
     "c": "symbols",
     "k": [
       "psi",
-      "wavefunction"
+      "wavefunction",
+      "greek"
     ],
     "p": 0.58
   },
@@ -545,7 +572,8 @@
     "k": [
       "complex",
       "C",
-      "set of complex"
+      "set of complex",
+      "number"
     ],
     "p": 0.6
   },
@@ -582,7 +610,8 @@
       "hbar",
       "planck constant",
       "reduced planck",
-      "ħ"
+      "ħ",
+      "physics"
     ],
     "p": 0.6
   },
@@ -593,7 +622,8 @@
     "k": [
       "naturals",
       "N",
-      "set of naturals"
+      "set of naturals",
+      "number"
     ],
     "p": 0.62
   },
@@ -604,7 +634,8 @@
     "k": [
       "rationals",
       "Q",
-      "set of rationals"
+      "set of rationals",
+      "number"
     ],
     "p": 0.6
   },
@@ -615,7 +646,8 @@
     "k": [
       "reals",
       "R",
-      "set of reals"
+      "set of reals",
+      "number"
     ],
     "p": 0.64
   },
@@ -638,7 +670,8 @@
     "k": [
       "integers",
       "Z",
-      "set of integers"
+      "set of integers",
+      "number"
     ],
     "p": 0.64
   },
@@ -650,7 +683,8 @@
       "ohm",
       "resistance",
       "omega",
-      "compatibility"
+      "compatibility",
+      "greek"
     ],
     "p": 0.55
   },
@@ -665,6 +699,18 @@
     ],
     "p": 0.6
   },
+    {
+    "e": "°K",
+    "n": "degree kelvin",
+    "c": "symbols",
+    "k": [
+      "kelvin",
+      "temperature",
+      "K",
+      "degree"
+    ],
+    "p": 0.6
+  },
   {
     "e": "Å",
     "n": "angstrom sign",
@@ -672,7 +718,8 @@
     "k": [
       "angstrom",
       "ångström",
-      "compatibility"
+      "compatibility",
+      "physics"
     ],
     "p": 0.5
   },
@@ -883,7 +930,8 @@
       "derivative",
       "d/dx",
       "calculus",
-      "curly d"
+      "curly d",
+      "math"
     ],
     "p": 0.84
   },
