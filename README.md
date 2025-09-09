@@ -37,10 +37,13 @@ Preferred (compact)
 }
 ```
 
-e: emoji/symbol (string)
-n: human-readable name
-c: category one of smileys|people|gestures|animals|food|activities|travel|objects|symbols|flags
-k: keywords/tags (array of strings)
-p: optional popularity/boost (0..1, default 0.5)
+* e: emoji/symbol (string)
+* n: human-readable name
+* c: category one of smileys|people|gestures|animals|food|activities|travel|objects|symbols|flags
+* k: keywords/tags (array of strings)
+* p: optional popularity/boost (0..1, default 0.5)
+
+
+#### Search App
 
 
