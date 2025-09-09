@@ -1,10 +1,11 @@
 # emoji-quick-search
 
 ### purpose
-Finding the right emoji or symbol is a pain! I need a better and more cross-indexes search when I'm looking for character I need. So I built one.
+Finding the right emoji or symbol is a pain! For example if you are looking for "dead" the traditional search gives you 😵, 💀, and ☠️ but not 🪦. If you search for "anatomical" you get 🫀 but NOT 🫁. Additionally, it can be a pain to find certain scientific characters (∇, ∉, °F, ℤ, etc). 
+I wanted a better, smarter, faster, and more cross-indexed search for emoji and characters. So I built one.
 
 ### implementation
-Find and copy the exact emoji or scientific symbol you need—instantly.
+Find and copy the exact emoji or scientific symbol you need—instantly. 
 Type to filter, click (or press Enter) to copy. Zero backend. Works from any static host.
 
 #### Highlights
