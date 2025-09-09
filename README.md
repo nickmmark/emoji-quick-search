@@ -25,7 +25,7 @@ Type to filter, click (or press Enter) to copy. Zero backend. Works from any sta
 #### Date schema
 Data Format
 
-The app accepts a compact schema (preferred) and can normalize common alternatives:
+The app uses a compact schema encoded in a JSON:
 
 ```
 Preferred (compact)
@@ -46,5 +46,11 @@ Preferred (compact)
 
 
 #### Search App
-
+* Loads a JSON from either local file, a HTTP server, or a web address (Github).
+* Search: splits on spaces, matches exact tokens, then prefix/substring fallback; scores by match quality + p boost.
+* Copy: click or press Enter to copy the first result. Keyboard: Ctrl/Cmd+C on a focused tile.
+* Recents: last 20 selections stored in localStorage.
+* Categories: pills filter results, Recent scrolls to the recents section.
+* Hover-to-Enlarge: glyph scales to 1.3× on hover/focus (1.18× active). No layout shift.
+* Performance: GPU transforms, debounced input, no frameworks, single file.
 
