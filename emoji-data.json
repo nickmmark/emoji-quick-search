@@ -1837,7 +1837,9 @@
       "hot",
       "hot beverage",
       "steaming",
-      "tea"
+      "tea",
+      "gossip",
+      "spill it"
     ],
     "p": 0.5
   },
@@ -3280,7 +3282,9 @@
     "k": [
       "hand",
       "write",
-      "writing hand"
+      "writing hand",
+      "noted",
+      "write down"
     ],
     "p": 0.5
   },
@@ -3426,7 +3430,9 @@
       "*",
       "sparkle",
       "sparkles",
-      "star"
+      "star",
+      "emphasis",
+      "sarcasm"
     ],
     "p": 0.5
   },
@@ -8193,7 +8199,9 @@
     "k": [
       "hot",
       "hot pepper",
-      "pepper"
+      "pepper",
+      "spicy",
+      "hot take"
     ],
     "p": 0.5
   },
@@ -8328,7 +8336,8 @@
     "k": [
       "fallen leaf",
       "falling",
-      "leaf"
+      "leaf",
+      "apoptosis"
     ],
     "p": 0.5
   },
@@ -8351,7 +8360,9 @@
     "c": "animals",
     "k": [
       "mushroom",
-      "toadstool"
+      "toadstool",
+      "penis",
+      "dick"
     ],
     "p": 0.5
   },
@@ -8364,7 +8375,9 @@
       "food",
       "fungus",
       "nature",
-      "vegetable"
+      "vegetable",
+      "penis",
+      "dick"
     ],
     "p": 0.5
   },
@@ -8386,7 +8399,9 @@
     "k": [
       "aubergine",
       "eggplant",
-      "vegetable"
+      "vegetable",
+      "penis",
+      "dick"
     ],
     "p": 0.5
   },
@@ -8515,7 +8530,10 @@
     "c": "food",
     "k": [
       "fruit",
-      "peach"
+      "peach",
+      "ass",
+      "butt",
+      "cheeky"
     ],
     "p": 0.5
   },
@@ -12778,7 +12796,9 @@
     "k": [
       "eye",
       "eyes",
-      "face"
+      "face",
+      "peep",
+      "spill"
     ],
     "p": 0.5
   },
@@ -24279,7 +24299,9 @@
       "face",
       "fairy tale",
       "monster",
-      "skull"
+      "skull",
+      "dead",
+      "anatomical"
     ],
     "p": 0.5
   },
@@ -24825,7 +24847,9 @@
       "manicure",
       "nail",
       "nail polish",
-      "polish"
+      "polish",
+      "sass",
+      "sassy"
     ],
     "p": 0.5
   },
@@ -25624,7 +25648,9 @@
     "k": [
       "break",
       "broken",
-      "broken heart"
+      "broken heart",
+      "heartbreak",
+      "heart"
     ],
     "p": 0.5
   },
@@ -26018,7 +26044,9 @@
       "full",
       "hundred",
       "hundred points",
-      "score"
+      "score",
+      "100 percent",
+      "keep it real"
     ],
     "p": 0.5
   },
@@ -27432,7 +27460,9 @@
     "k": [
       "fire",
       "flame",
-      "tool"
+      "tool",
+      "hot",
+      "hot take"
     ],
     "p": 0.5
   },
@@ -29202,7 +29232,9 @@
       "face",
       "moai",
       "moyai",
-      "statue"
+      "statue",
+      "stone faced",
+      "sigma"
     ],
     "p": 0.5
   },
@@ -29239,7 +29271,8 @@
       "face with tears of joy",
       "joy",
       "laugh",
-      "tear"
+      "tear",
+      "lol"
     ],
     "p": 0.5
   },
@@ -29807,7 +29840,9 @@
       "groan",
       "relief",
       "whisper",
-      "whistle"
+      "whistle",
+      "exasperated",
+      "exasperation"
     ],
     "p": 0.5
   },
@@ -29913,7 +29948,10 @@
       "hypnotized",
       "spiral",
       "trouble",
-      "whoa"
+      "whoa",
+      "confused",
+      "dizzy",
+      "disoriented"
     ],
     "p": 0.5
   },
@@ -30144,7 +30182,8 @@
       "eyes",
       "face",
       "face with rolling eyes",
-      "rolling"
+      "rolling",
+      "here we go"
     ],
     "p": 0.5
   },
@@ -31886,7 +31925,10 @@
     "c": "travel",
     "k": [
       "rocket",
-      "space"
+      "space",
+      "astronaut",
+      "to the moon",
+      "going up fast"
     ],
     "p": 0.5
   },
@@ -34165,7 +34207,9 @@
       "life saver",
       "rescue",
       "ring buoy",
-      "safety"
+      "safety",
+      "nautical",
+      "boat"
     ],
     "p": 0.5
   },
@@ -34545,7 +34589,8 @@
       "interrogation",
       "pinched",
       "pinched fingers",
-      "sarcastic"
+      "sarcastic",
+      "chef's kiss"
     ],
     "p": 0.5
   },
@@ -34652,7 +34697,10 @@
     "c": "people",
     "k": [
       "pinching hand",
-      "small amount"
+      "small amount",
+      "tiny",
+      "a little",
+      "a lil"
     ],
     "p": 0.5
   },
@@ -34720,7 +34768,9 @@
       "mouth",
       "zip",
       "zipper",
-      "zipper-mouth face"
+      "zipper-mouth face",
+      "secret",
+      "keep a secret"
     ],
     "p": 0.5
   },
@@ -34757,7 +34807,9 @@
       "face",
       "geek",
       "nerd",
-      "nerd face"
+      "nerd face",
+      "intelligent",
+      "smart"
     ],
     "p": 0.5
   },
@@ -34768,7 +34820,8 @@
     "k": [
       "face",
       "thinking",
-      "thinking face"
+      "thinking face",
+      "skeptical"
     ],
     "p": 0.5
   },
@@ -35768,7 +35821,9 @@
     "k": [
       "distrust",
       "face with raised eyebrow",
-      "skeptic"
+      "skeptic",
+      "side eye",
+      "skeptical"
     ],
     "p": 0.5
   },
@@ -35848,7 +35903,8 @@
     "k": [
       "exploding head",
       "mind blown",
-      "shocked"
+      "shocked",
+      "surprised"
     ],
     "p": 0.5
   },
@@ -38339,7 +38395,8 @@
       "hot",
       "hot face",
       "red-faced",
-      "sweating"
+      "sweating",
+      "spicy"
     ],
     "p": 0.5
   },
@@ -38353,7 +38410,9 @@
       "cold face",
       "freezing",
       "frostbite",
-      "icicles"
+      "icicles",
+      "that's cold",
+      "harsh"
     ],
     "p": 0.5
   },
@@ -39939,7 +39998,9 @@
     "k": [
       "condiment",
       "salt",
-      "shaker"
+      "shaker",
+      "salty",
+      "bitter"
     ],
     "p": 0.5
   },
@@ -46244,7 +46305,10 @@
     "c": "people",
     "k": [
       "brain",
-      "intelligent"
+      "intelligent",
+      "anatomical",
+      "organ",
+      "neurology"
     ],
     "p": 0.5
   },
@@ -46330,7 +46394,9 @@
       "dynamite",
       "explosive",
       "firecracker",
-      "fireworks"
+      "fireworks",
+      "explode",
+      "fuse"
     ],
     "p": 0.5
   },
@@ -46358,7 +46424,8 @@
       "experiment",
       "lab",
       "science",
-      "test tube"
+      "test tube",
+      "biology"
     ],
     "p": 0.5
   },
@@ -46372,7 +46439,8 @@
       "biology",
       "culture",
       "lab",
-      "petri dish"
+      "petri dish",
+      "biology"
     ],
     "p": 0.5
   },
@@ -46386,7 +46454,8 @@
       "evolution",
       "gene",
       "genetics",
-      "life"
+      "life",
+      "biology"
     ],
     "p": 0.5
   },
@@ -46565,7 +46634,8 @@
     "k": [
       "paper towels",
       "roll of paper",
-      "toilet paper"
+      "toilet paper",
+      "bathroom"
     ],
     "p": 0.5
   },
@@ -46733,7 +46803,8 @@
       "injury",
       "medicine",
       "menstruation",
-      "medical"
+      "medical",
+      "transfusion"
     ],
     "p": 0.5
   },
@@ -46744,7 +46815,8 @@
     "k": [
       "adhesive bandage",
       "bandage",
-      "medical"
+      "medical",
+      "medicine"
     ],
     "p": 0.5
   },
@@ -46756,7 +46828,8 @@
       "doctor",
       "heart",
       "medicine",
-      "stethoscope"
+      "stethoscope",
+      "medical"
     ],
     "p": 0.5
   },
@@ -46769,7 +46842,11 @@
       "doctor",
       "medical",
       "skeleton",
-      "x-ray"
+      "x-ray",
+      "fracture",
+      "medicine",
+      "chest x-ray",
+      "radiograph"
     ],
     "p": 0.5
   },
@@ -46783,7 +46860,10 @@
       "disability",
       "hurt",
       "mobility aid",
-      "stick"
+      "stick",
+      "fracture",
+      "medical",
+      "medicine"
     ],
     "p": 0.5
   },
@@ -47977,7 +48057,9 @@
       "dissolve",
       "liquid",
       "melt",
-      "melting face"
+      "melting face",
+      "embarrass",
+      "embarrassed"
     ],
     "p": 0.5
   },
