@@ -1,28 +1,27 @@
 # emoji-quick-search
 
-### purpose
+## 🔍️ purpose
 Finding the right emoji or symbol is a pain! For example if you are looking for "dead" the traditional search gives you 😵, 💀, and ☠️ but not 🪦. If you search for "anatomical" you get 🫀 but NOT 🫁. Additionally, it can be a pain to find certain scientific characters (∇, ∉, °F, ℤ, etc). 
 I wanted a better, smarter, faster, and more cross-indexed search for emoji and characters. So I built one.
 
-### implementation
+## ⚙️ implementation
 Find and copy the exact emoji or scientific symbol you need—instantly. 
 Type to filter, click (or press Enter) to copy. Zero backend. Works from any static host.
 
-#### Highlights
-* Blazing-fast search: token index + fuzzy fallback (prefix + substring).
-* One click to copy (with clipboard fallback for older browsers).
-* Categories & Recents: filter by pill; auto-save your last uses.
-* Hover enlarge: glyph zooms on hover/focus (respects prefers-reduced-motion).
-* Black/white high-contrast theme: tuned for visibility.
+Try it out [here](https://nickmmark.github.io/emoji-quick-search/).
+
+### highlights
+* fast search: token index + fuzzy fallback (prefix + substring).
+* copy with one click (with clipboard fallback for older browsers).
+* categories & Recents: filter by pill
+* enlarged with hover
 * Flexible data loading:
   * emoji-data.json in the same folder (default)
   * absolute /emoji-data.json fallback
-  * ?data=… query param override
-  * remembered URL in localStorage
   * built-in remotes (your GitHub raw + jsDelivr mirror)
-* No server code: just static files.
+* no server code: just static files
 
-#### Date schema
+### JSON data schema
 Data Format
 
 The app uses a compact schema encoded in a JSON:
@@ -45,12 +44,6 @@ Preferred (compact)
 * p: optional popularity/boost (0..1, default 0.5)
 
 
-#### Search App
-* Loads a JSON from either local file, a HTTP server, or a web address (Github).
-* Search: splits on spaces, matches exact tokens, then prefix/substring fallback; scores by match quality + p boost.
-* Copy: click or press Enter to copy the first result. Keyboard: Ctrl/Cmd+C on a focused tile.
-* Recents: last 20 selections stored in localStorage.
-* Categories: pills filter results, Recent scrolls to the recents section.
-* Hover-to-Enlarge: glyph scales to 1.3× on hover/focus (1.18× active). No layout shift.
-* Performance: GPU transforms, debounced input, no frameworks, single file.
+## 🪪 License
+* Freely available under an MIT License 
 
