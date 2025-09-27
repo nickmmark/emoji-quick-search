@@ -1,4 +1,4 @@
-[
+ [
   {
     "e": "#️⃣",
     "n": "keycap: #",
@@ -25,7 +25,9 @@
     "c": "symbols",
     "k": [
       "keycap",
-      "keycap: 0"
+      "keycap: 0",
+      "number",
+      "block number"
     ],
     "p": 0.5
   },
@@ -2413,7 +2415,8 @@
       "cog",
       "cogwheel",
       "gear",
-      "tool"
+      "tool",
+      "settings"
     ],
     "p": 0.5
   },
@@ -2424,7 +2427,8 @@
     "k": [
       "atheist",
       "atom",
-      "atom symbol"
+      "atom symbol",
+      "atomic"
     ],
     "p": 0.5
   },
@@ -2433,7 +2437,8 @@
     "n": "fleur-de-lis",
     "c": "symbols",
     "k": [
-      "fleur-de-lis"
+      "fleur-de-lis",
+      "france"
     ],
     "p": 0.5
   },
@@ -2442,7 +2447,10 @@
     "n": "warning",
     "c": "symbols",
     "k": [
-      "warning"
+      "warning",
+      "caution",
+      "alert",
+      "danger"
     ],
     "p": 0.5
   },
@@ -2498,7 +2506,9 @@
     "c": "objects",
     "k": [
       "coffin",
-      "death"
+      "death",
+      "burried",
+      "burial"
     ],
     "p": 0.5
   },
@@ -2722,7 +2732,8 @@
     "k": [
       "boat",
       "ferry",
-      "passenger"
+      "passenger",
+      "ship"
     ],
     "p": 0.5
   },
@@ -2735,7 +2746,8 @@
       "resort",
       "sailboat",
       "sea",
-      "yacht"
+      "yacht",
+      "ship"
     ],
     "p": 0.5
   },
@@ -3013,7 +3025,9 @@
       "check",
       "check mark button",
       "mark",
-      "✓"
+      "✓",
+      "correct",
+      "right"
     ],
     "p": 0.5
   },
@@ -3023,7 +3037,10 @@
     "c": "travel",
     "k": [
       "aeroplane",
-      "airplane"
+      "airplane",
+      "aircraft",
+      "fly",
+      "plane"
     ],
     "p": 0.5
   },
@@ -3400,6 +3417,7 @@
     "c": "symbols",
     "k": [
       "christian",
+      "christianity",
       "cross",
       "latin cross",
       "religion"
@@ -3504,7 +3522,9 @@
       "mark",
       "square",
       "x",
-      "×"
+      "×",
+      "wrong",
+      "incorrect"
     ],
     "p": 0.5
   },
@@ -13272,6 +13292,21 @@
     ],
     "p": 0.49
   },
+    {
+    "e": "",
+    "n": "backhand index pointing right",
+    "c": "people",
+    "k": [
+      "backhand",
+      "backhand index pointing right",
+      "finger",
+      "hand",
+      "index",
+      "point",
+      "skin tone"
+    ],
+    "p": 0.49
+  },
   {
     "e": "👉🏼",
     "n": "backhand index pointing right",
@@ -13303,19 +13338,16 @@
     "p": 0.49
   },
   {
-    "e": "👉🏾",
-    "n": "backhand index pointing right",
+    "e": "👉👈",
+    "n": "fingers touching",
     "c": "people",
     "k": [
-      "backhand",
-      "backhand index pointing right",
-      "finger",
-      "hand",
-      "index",
-      "point",
-      "skin tone"
+      "shy",
+      "flirty",
+      "who me",
+      "bashful"
     ],
-    "p": 0.49
+    "p": 0.5
   },
   {
     "e": "👉🏿",
@@ -24286,7 +24318,8 @@
       "devil",
       "face",
       "fantasy",
-      "imp"
+      "imp",
+      "lust"
     ],
     "p": 0.5
   },
@@ -27150,7 +27183,9 @@
     "n": "battery",
     "c": "objects",
     "k": [
-      "battery"
+      "battery",
+      "full",
+      "fully charged"
     ],
     "p": 0.5
   },
@@ -38381,7 +38416,8 @@
       "tipsy",
       "uneven eyes",
       "wavy mouth",
-      "woozy face"
+      "woozy face",
+      "drunk"
     ],
     "p": 0.5
   },
@@ -47328,7 +47364,8 @@
     "k": [
       "electronic",
       "low battery",
-      "low energy"
+      "low energy",
+      "empty"
     ],
     "p": 0.5
   },
