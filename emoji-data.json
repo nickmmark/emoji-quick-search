@@ -12346,7 +12346,8 @@
     "n": "octopus",
     "c": "animals",
     "k": [
-      "octopus"
+      "octopus",
+      "hug"
     ],
     "p": 0.5
   },
@@ -12818,7 +12819,8 @@
       "eyes",
       "face",
       "peep",
-      "spill"
+      "spill",
+      "adult"
     ],
     "p": 0.5
   },
@@ -24319,7 +24321,8 @@
       "face",
       "fantasy",
       "imp",
-      "lust"
+      "lust",
+      "frisky"
     ],
     "p": 0.5
   },
@@ -27497,7 +27500,8 @@
       "flame",
       "tool",
       "hot",
-      "hot take"
+      "hot take",
+      "lit"
     ],
     "p": 0.5
   },
@@ -29198,7 +29202,9 @@
     "k": [
       "ballot",
       "ballot box with ballot",
-      "box"
+      "box",
+      "vote",
+      "voting"
     ],
     "p": 0.5
   },
@@ -32268,7 +32274,8 @@
       "articulated lorry",
       "lorry",
       "semi",
-      "truck"
+      "truck",
+      "dump truck"
     ],
     "p": 0.5
   },
@@ -35534,7 +35541,9 @@
     "k": [
       "clown",
       "clown face",
-      "face"
+      "face",
+      "fool",
+      "foolish"
     ],
     "p": 0.5
   },
@@ -38193,7 +38202,10 @@
     "c": "food",
     "k": [
       "oyster pail",
-      "takeout box"
+      "takeout box",
+      "take-away",
+      "take out",
+      "take home"
     ],
     "p": 0.5
   },
@@ -46364,7 +46376,10 @@
     "c": "objects",
     "k": [
       "baseball cap",
-      "billed cap"
+      "billed cap",
+      "hat",
+      "capping",
+      "lying"
     ],
     "p": 0.5
   },
